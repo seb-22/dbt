@@ -6,6 +6,5 @@ SELECT
     COUNTRY AS OWNER_COUNTRY,
     E-MAIL AS EMAIL,
     PHONE_NUMBER
-
 FROM {source('pos', 'franchise')}
 
