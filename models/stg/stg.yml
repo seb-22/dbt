@@ -7,3 +7,4 @@ models:
       description: "ID of the franchise"
       data_tests:
         - not_null
+        - unique:
