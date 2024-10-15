@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: L2_DIM_TRUCK
+    columns:
+      - name: TRUCK_ID
+        tests:
+          - unique
+          - not_null
+
+  - name: L2_DIM_CUSTOMER
+    columns:
+      - name: CUSTOMER_ID
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: RAW_POS
+    database: RAW_POS
+    schema: raw
+    tables:
+      - name: TRUCK
+      - name: ORDER_DETAIL
+      - name: COUNTRY
+      - name: FRANCHISE
+      - name: LOCATION
+      - name: MENU
+      - name: ORDER_HEADER
+
+  - name: RAW_CUSTOMER        # Agrega esta nueva fuente
+    database: RAW_CUSTOMER    # Asegúrate de que este sea el nombre correcto de la base de datos
+    schema: raw               # Reemplaza con el esquema correcto si es necesario
+    tables:
+      - name: CUSTOMER_LOYALTY  # Asegúrate de que esta tabla exista en Snowflake
