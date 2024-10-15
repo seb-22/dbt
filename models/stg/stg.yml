@@ -3,8 +3,15 @@ version: 2
 models:
   - name: stg_franchise
     columns:
-    - name: franchise_id
-      description: "ID of the franchise"
-      data_tests:
-        - not_null
-        - unique:
+      - name: franchise_id
+        description: "ID of the franchise"
+        tests:
+          - unique
+          - not_null
+
+  - name: l1_franchise
+    columns:
+      - name: franchise_id
+        tests:
+          - unique
+          - not_null
