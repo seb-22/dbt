@@ -2,9 +2,16 @@ version: 2
 
 models:
   - name: stg_franchise
-    description: "Franchise staging model"
-    tests:
-      - unique:
-          column_name: franchise_id
-      - not_null:
-          column_name: franchise_id
+    columns:
+      - name: franchise_id
+        description: "ID of the franchise"
+        tests:
+          - unique
+          - not_null
+
+  - name: l1_franchise
+    columns:
+      - name: franchise_id
+        tests:
+          - unique
+          - not_null
