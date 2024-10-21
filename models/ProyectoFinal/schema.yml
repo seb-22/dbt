@@ -1,6 +1,13 @@
 version: 2
 
 models:
+  - name: L2_DIM_CUSTOMER
+    columns:
+      - name: CUSTOMER_ID
+        tests:
+          - unique
+          - not_null
+
   - name: L2_DIM_TRUCK
     columns:
       - name: TRUCK_ID
@@ -8,9 +15,31 @@ models:
           - unique
           - not_null
 
-  - name: L2_DIM_CUSTOMER
+  - name: L2_DIM_PRODUCT
     columns:
-      - name: CUSTOMER_ID
+      - name: PRODUCT_ID
         tests:
           - unique
           - not_null
+
+  - name: L2_FCT_ORDER_DETAIL
+    columns:
+      - name: ORDER_DETAIL_ID
+        tests:
+          - unique
+          - not_null
+      - name: CUSTOMER_ID
+        tests:
+          - relationships:
+              to: ref('L2_DIM_CUSTOMER')
+              field: CUSTOMER_ID
+      - name: TRUCK_ID
+        tests:
+          - relationships:
+              to: ref('L2_DIM_TRUCK')
+              field: TRUCK_ID
+      - name: PRODUCT_ID
+        tests:
+          - relationships:
+              to: ref('L2_DIM_PRODUCT')
+              field: PRODUCT_ID
