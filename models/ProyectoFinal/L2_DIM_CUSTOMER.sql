@@ -6,7 +6,7 @@ WITH raw_data AS (
         COUNTRY,
         CITY,
         GENDER,
-        EMAIL
+        E_mail  -- Use the correct column name here
     FROM {{ source('RAW_CUSTOMER', 'CUSTOMER_LOYALTY') }}
 )
 
@@ -18,5 +18,5 @@ SELECT
     COUNTRY,
     CITY,
     GENDER,
-    EMAIL
+    E_mail  -- Use the correct column name here
 FROM raw_data
