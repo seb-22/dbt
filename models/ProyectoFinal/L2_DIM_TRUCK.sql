@@ -1,8 +1,7 @@
 WITH raw_data AS (
     SELECT
         TRUCK_ID,
-        TRUCK_BRAND_NAME,
-        CAR_BRAND,
+        MAKE,
         MODEL,
         YEAR
     FROM {{ source('RAW_POS', 'TRUCK') }}
@@ -10,8 +9,7 @@ WITH raw_data AS (
 
 SELECT
     TRUCK_ID,
-    TRUCK_BRAND_NAME,
-    CAR_BRAND,
+    MAKE,
     MODEL,
     YEAR
 FROM raw_data

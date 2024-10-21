@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: RAW_POS               
-    database: RAW_POS            
-    schema: raw                 
+    database: TB_101            
+    schema: RAW_POS                  
     tables:                      
       - name: TRUCK             
       - name: ORDER_DETAIL       
@@ -12,9 +12,10 @@ sources:
       - name: LOCATION           
       - name: MENU               
       - name: ORDER_HEADER       
+     
 
   - name: RAW_CUSTOMER           
-    database: RAW_CUSTOMER       
-    schema: raw                  
+    database: TB_101            # Ensure this is set to TB_101
+    schema: RAW_CUSTOMER        # Make sure this is correct
     tables:                      
       - name: CUSTOMER_LOYALTY   
